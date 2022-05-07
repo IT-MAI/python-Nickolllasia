@@ -1,13 +1,16 @@
 #1е задание
+# Создаём класс Студент
 class Student:
-    def __init__(self,name,surname,gender,age,id):
+
+    # Студент имеет некие аттрибуты. Давайте инициализируем их
+    def __init__(self, name, surname, gender, age, id):
         self.name = name
         self.surname = surname
         self.gender = gender
         self.age = age
         self.id = id
 
-
+    # Возвращает удобную для пользователя информацию о студенте
     def __str__(self):
         return f'name: {self.name}\nsurname: {self.surname}\ngender: {self.gender}\nage: {self.age}\nid: {self.id}\n\n'
 
@@ -21,6 +24,7 @@ s5=Student('Queue','Delovidovna','woman',20,962)
 
 list_s=[s1,s2,s3,s4,s5]
 
+# Сортирует список из студентов по годам
 def sort_age(l_students):
     for j in range(len(l_students)-1):
         for i in range(len(l_students)-1):
@@ -32,6 +36,7 @@ print(sort_age(list_s))
 
 #3е и 4е задания:
 
+# Левый бинарный поиск
 def bin_search(l_students,current_age):
     left=0
     right=len(l_students)
